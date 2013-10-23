@@ -74,7 +74,7 @@ public class AndroidBuilder implements Builder {
 	}
 
 	protected void buildServiceImpl(VelocityContext context) throws Exception {
-		String templatePath = "service.vm";
+		String templatePath = "com/liferay/mobile/sdk/android/service.vm";
 		String filePath = getServiceFilePath(context);
 
 		VelocityUtil.generate(context, templatePath, filePath);
