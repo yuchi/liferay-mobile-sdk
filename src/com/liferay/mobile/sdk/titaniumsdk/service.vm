@@ -1,0 +1,14 @@
+
+#set ($actions = $discovery.actions)
+#set ($context = $discovery.context)
+
+// Implement $className
+
+#foreach ($action in $actions)
+	#set ($returnType = $jsUtil.getReturnType($action.response))
+	#set ($methodName = $jsUtil.getMethodName($action.path))
+	#set ($parameters = $action.parameters)
+
+	// Implement ${className}.${methodName} for "${action.path}" for Liferay ${version}
+
+#end

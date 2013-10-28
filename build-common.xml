@@ -38,9 +38,12 @@
 
 		<copy file="src/com/liferay/mobile/sdk/android/service.vm"
 			todir="classes/com/liferay/mobile/sdk/android" />
-		
+
 		<copy file="src/com/liferay/mobile/sdk/ios/header.vm"
 			todir="classes/com/liferay/mobile/sdk/ios" />
+
+		<copy file="src/com/liferay/mobile/sdk/titaniumsdk/service.vm"
+			dest="classes/com/liferay/mobile/sdk/titaniumsdk/service.vm" />
 
 		<javac
 			classpathref="builder.classpath"

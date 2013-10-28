@@ -20,6 +20,7 @@ import com.liferay.mobile.sdk.http.DiscoveryResponseHandler;
 import com.liferay.mobile.sdk.http.HttpUtil;
 import com.liferay.mobile.sdk.http.PortalVersion;
 import com.liferay.mobile.sdk.ios.iOSBuilder;
+import com.liferay.mobile.sdk.titaniumsdk.TitaniumSDKBuilder;
 import com.liferay.mobile.sdk.util.Validator;
 
 import java.util.HashMap;
@@ -79,6 +80,9 @@ public class BuilderAntTask {
 			}
 			else if (builderType.equals("ios")) {
 				builder = new iOSBuilder();
+			}
+			else if (builderType.equals("titaniumsdk")) {
+				builder = new TitaniumSDKBuilder();
 			}
 
 			Discovery discovery = client.execute(get, handler);

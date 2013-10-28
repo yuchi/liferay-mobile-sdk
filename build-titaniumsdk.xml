@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<project name="titanium-sdk" basedir="." default="build-service">
+	<import file="build-common.xml" />
+
+	<property name="dist.dir.titaniumsdk" value="${dist.dir}/titaniumsdk" />
+
+	<property name="titaniumsdk.dir" value="${project.dir}/titaniumsdk" />
+	<property name="titaniumsdk.src" value="${titaniumsdk.dir}/src" />
+
+	<property name="gen.dir" value="${titaniumsdk.dir}/gen" />
+
+	<target name="build-service">
+		<antcall target="clear-gen" />
+
+		<antcall target="build-common.build-service">
+			<param name="builder" value="titaniumsdk" />
+		</antcall>
+	</target>
+
+	<target name="clear-gen">
+		<delete includeemptydirs="true">
+			<fileset dir="${gen.dir}"  includes="**/*" />
+		</delete>
+	</target>
+
+	<target name="compile">
+
+		<!-- TODO concat files -->
+
+	</target>
+
+	<target name="test">
+
+		<!-- TODO launch NodeJS -->
+
+	</target>
+</project>
