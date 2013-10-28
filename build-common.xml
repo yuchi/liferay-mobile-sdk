@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 
 <project name="build-common" basedir="." default="compile">
-    <property name="project.dir" value="${basedir}" />
+		<property name="project.dir" value="${basedir}" />
 
-    <property name="dist.dir" value="${project.dir}/dist" />
+		<property name="dist.dir" value="${project.dir}/dist" />
 	<property name="src.dir" value="${project.dir}/src" />
-    <property name="lib.dir" value="${project.dir}/lib" />
-    <property name="development.dir" value="${lib.dir}/development" />
+		<property name="lib.dir" value="${project.dir}/lib" />
+		<property name="development.dir" value="${lib.dir}/development" />
 
 	<property environment="env" />
 
